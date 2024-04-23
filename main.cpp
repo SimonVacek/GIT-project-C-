@@ -21,6 +21,18 @@ void bubble_sort() {
     }
 }
 
+void selection_sort() {
+    for (int velkost_zoradenej_casti = 0; velkost_zoradenej_casti < SIZE - 1; velkost_zoradenej_casti++) {
+        int index_najmensej_polozky_v_nezoradenej_casti = velkost_zoradenej_casti;
+        for (int i = velkost_zoradenej_casti + 1; i < SIZE; i++) {
+            if (pole[i] < pole[index_najmensej_polozky_v_nezoradenej_casti]) {
+                index_najmensej_polozky_v_nezoradenej_casti = i;
+            }
+        }
+        swap(pole[index_najmensej_polozky_v_nezoradenej_casti], pole[velkost_zoradenej_casti]);
+    }
+}
+
 void autori() {
     cout << "Autori tohto projektu: Simon Vacek, Boris Bobacik." << endl;
 }
