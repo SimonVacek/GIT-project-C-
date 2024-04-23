@@ -33,6 +33,19 @@ void selection_sort() {
     }
 }
 
+void insertion_sort() {
+    int i, key, j;
+    for (i = 1; i < SIZE; i++) {
+        key = pole[i];
+        j = i - 1;
+        while (j >= 0 && pole[j] > key) {
+            pole[j + 1] = pole[j];
+            j = j - 1;
+        }
+        pole[j + 1] = key;
+    }
+}
+
 void autori() {
     cout << "Autori tohto projektu: Simon Vacek, Boris Bobacik." << endl;
 }
